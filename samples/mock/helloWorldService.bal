@@ -4,7 +4,7 @@ import ballerina.lang.messages;
 import ballerina.net.http;
 
 @http:configuration {basePath:"/hello"}
-service<http> helloWorld {
+service<http> hello {
     TestConnector testConnector = create TestConnector("MyParam1", "MyParam2", 5);
 
     @http:resourceConfig{

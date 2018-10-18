@@ -11,11 +11,11 @@ function testMain () {
     message request = {};
     string responseString;
 
-    string myURL = test:startService("helloWorld");
+    string myURL = test:startService("hello");
     string mockURL = test:startService("mockService");
 
-    mock:setValue("helloWorld.testConnector.param1", "new parameter2");
-    mock:setValue("helloWorld.testConnector.terminalCon.param1", mockURL);
+    mock:setValue("hello.testConnector.param1", "new parameter2");
+    mock:setValue("hello.testConnector.terminalCon.param1", mockURL);
 
     http:ClientConnector varEP = create http:ClientConnector(myURL);
     messages:setStringPayload(request, mockURL);
